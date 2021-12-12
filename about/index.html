@@ -1,0 +1,143 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>About Hugo XMag | Slaveya.ink</title>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link href=//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css rel=stylesheet>
+</head>
+<body class=page>
+<nav class=header>
+<div class=banner>
+<a href=/ class=text>
+&Sfr;&Lfr;&Afr;&Vfr;&Efr;&Yfr;&Afr;.&Im;&Nfr;&Kfr;
+</a>
+</div>
+<div class=head-meta>
+<span><a href=/>&larr; Back to Home</a></span>
+</div>
+</nav>
+<div class=container>
+<article>
+<div class=article-meta>
+<div class=categories>
+</div>
+<h1><span class=title>About Hugo XMag</span></h1>
+<h3 class=author>Yihui Xie
+</h3>
+</div>
+<main>
+<p><strong>XMag</strong> is the second Hugo theme I have designed. It is based on my first Hugo theme <a href=https://github.com/yihui/hugo-xmin><strong>XMin</strong></a>, and similarly, features minimalism but with a magazine style on the homepage inspired by <a href=https://en.wikipedia.org/wiki/Wikipedia:Wikipedia_Signpost>The Signpost</a> on Wikipedia. You can find its source code on Github: <a href=https://github.com/yihui/hugo-xmag>https://github.com/yihui/hugo-xmag</a> (licensed under MIT).</p>
+<h1 id=features>Features</h1>
+<p>This theme includes a few cool features:</p>
+<ul>
+<li>
+<p>Responsive article summary blocks on homepage</p>
+</li>
+<li>
+<p>Thumbnails in summary blocks</p>
+</li>
+<li>
+<p>Magazine title in Blackletter (𝔅𝔏𝔄ℭ𝔎 𝔏𝔈𝔗𝔗𝔈ℜ)</p>
+</li>
+<li>
+<p>Github edit links</p>
+</li>
+<li>
+<p>Author info and site info at the bottom of an article</p>
+</li>
+<li>
+<p>Multiple authors of a single page</p>
+</li>
+<li>
+<p>MathJax for LaTeX math expressions</p>
+</li>
+</ul>
+<p>It also supports features that are probably not even worth mentioning:</p>
+<ul>
+<li>
+<p>Google Analytics</p>
+</li>
+<li>
+<p>highlight.js for syntax highlighting of code blocks</p>
+</li>
+<li>
+<p>Display categories and tags on single pages</p>
+</li>
+<li>
+<p>Table of contents for single pages</p>
+</li>
+</ul>
+<p>Most features can be configured through <code>config.toml</code>, and a few can be enabled by custom layouts.</p>
+<h1 id=configtoml>config.toml</h1>
+<p>By default, your site title will be displayed at the top in Blackletter fonts if your web browser and operating system support Blackletter fonts. Essentially, for every English letter <code>X</code> in your site title, it is substituted with <code>&amp;Xfr;</code>, e.g. the Blackletter version of <code>A</code> is <code>&amp;Afr;</code> (𝔄). Below are the letters from A to Z:</p>
+<h2 id=afrbfrcfrdfrefrffrgfrhfrifrjfrkfrlfrmfrnfrofrpfrqfrrfrsfrtfrufrvfrwfrxfryfrzfr>𝔄𝔅ℭ𝔇𝔈𝔉𝔊ℌℑ𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔ℜ𝔖𝔗𝔘𝔙𝔚𝔛𝔜ℨ</h2>
+<p>Alternatively, you can provide a banner image:</p>
+<pre><code class=language-toml>[params.banner]
+    src = &quot;/path/to/banner.png&quot;
+    alt = &quot;alternative text on image&quot;
+</code></pre>
+<p>By default, each summary block on the homepage contains the first 200 letters extracted from all paragraphs of an article. I find Hugo&rsquo;s built in <code>.Summary</code> often unsatisfactory (e.g. it may contain headings and code blocks, which really should not go to the summary), so I wrote my own version. It works much better and the size of most summary blocks will be the same, unless certain articles are really short. The length 200 can be customized via <code>params.summary_length</code>.</p>
+<p>If you are not satisfied with the automatic summary, you can specify the <code>description</code> option in the (YAML) metadata of your Markdown document, e.g.,</p>
+<pre><code class=language-yaml>title: &quot;My Cool Post&quot;
+description: &quot;Please use this as the summary.&quot;
+</code></pre>
+<p>Each summary block may contain a thumbnail, which is the first image in an article if exists. You can override it by providing the <code>thumbnail</code> option in the meta data of your Markdown document, e.g.,</p>
+<pre><code class=language-yaml>---
+title: &quot;My Cool Post&quot;
+thumbnail: &quot;/url/of/the/image&quot;
+---
+</code></pre>
+<p>For each page, this theme adds an edit link to the top-right if a parameter <code>github_edit</code> is provided, so that your reader may easily help you edit a page and submit a pull request on Github.</p>
+<p>The page footer can be defined in <code>.Params.footer</code>, and the text is treated as Markdown. Below are some sample configurations:</p>
+<pre><code class=language-toml>[params]
+    summary_length = 200
+    github_edit = &quot;https://github.com/yihui/hugo-xmag/edit/master/exampleSite/content/&quot;
+    footer = &quot;&amp;copy; [Yihui Xie](https://yihui.org) 2017&quot;
+</code></pre>
+<p>There are a few phrases that you can &ldquo;translate&rdquo; (I didn&rsquo;t use Hugo&rsquo;s multi-language feature just because I&rsquo;m lazy):</p>
+<pre><code class=language-toml>[params.text]
+    about_author = &quot;About the Author&quot;
+    author_delimiter = &quot;, &quot;
+    back = &quot;Back to Home&quot;
+    edit = &quot;Edit this page&quot;
+    tags = &quot;Tags: &quot;
+    truncated = &quot; &amp;hellip;&quot;
+    uncategorized = &quot;Uncategorized&quot;
+</code></pre>
+<p>You can define a data file under <code>data/</code> to store all authors information, e.g., you can use a TOML file <code>data/authors.toml</code> (or YAML/JSON):</p>
+<pre><code>&quot;Alice Wonder&quot; = &quot;I'm Alice. More about me on [my homepage](http://example.com).&quot;
+&quot;Yihui Xie&quot; = &quot;Hey this is Yihui. You don't want to follow me on Twitter @xieyihui.&quot;
+</code></pre>
+<p>Then for an article with an author name that can be found in <code>data/authors.toml</code>, the author info will be added to the bottom of a page. For example, on this page, you can find information about me. You can change the phrase &ldquo;About the Author&rdquo; by changing the parameter <code>about_author</code> in <code>config.toml</code>.</p>
+<p>To add a table of contents to an article, you can add <code>toc: true</code> to the YAML metadata of the Markdown document.</p>
+<h1 id=custom-layouts>Custom layouts</h1>
+<p>Besides the custom layout^[If this is the first time you have heard about &ldquo;customizing layouts&rdquo;, please read the Hugo documentation first: https://gohugo.io/themes/customizing/.] files <code>head_custom.html</code> and <code>foot_custom.html</code> supported in <strong>XMin</strong> (see <a href=https://xmin.yihui.org/about/>documentation</a>), this theme added a few more layout files such as <code>banner.html</code>, <code>comments.html</code> and <code>info.html</code> under <code>layouts/partials/</code>. The first can be used to customize the banner. The second can be used to add a comment section, e.g., if you want to use Hugo&rsquo;s default Disqus template, just add this to <code>comments.html</code>:</p>
+<pre><code>{{ template &quot;_internal/disqus.html&quot; . }}
+</code></pre>
+<p>You can also append arbitrary text to each article through <code>info.html</code>. For example, you may declare copyrights or briefly introduce your site.</p>
+<p>There are other partial templates in this theme and I encourage you to read the source code to figure out what they do.</p>
+<h1 id=final-words>Final words</h1>
+<p>I feel the world has become so noisy that I&rsquo;m often at a loss when looking at a web page, because there are so many things to distract me. I was heavily influenced by the book <a href=https://en.wikipedia.org/wiki/Amusing_Ourselves_to_Death><em>Amusing Ourselves to Death</em></a> after I read it in early 2017. From then on, I was hoping to design a theme for a website that gives articles the top priority. Everything else must give way to articles. That is why the navigation menu is at the bottom instead of in the conventional position (top or sidebar). There isn&rsquo;t much to do other than reading an article when you open a page. By the way, this is a pure plain-text theme. You can certainly add images if you want, but this theme itself contains zero binary files. Out of my <a href=https://en.wikipedia.org/wiki/Obsessive%E2%80%93compulsive_disorder>OCD</a>, I was just trying to push the limits of web design without using any images or JavaScript libraries (I&rsquo;m a totally amateur).^[I used MathJax and highlight.js anyway in this theme because they are helpful.]</p>
+<p>I hope you can enjoy this theme. Again, the source code is <a href=https://github.com/yihui/hugo-xmag>on Github</a>. Happy hacking!</p>
+</main>
+</article>
+</div>
+<script async src=//yihui.org/js/center-img.js></script>
+<footer>
+<div class=footer>
+<ul class=menu>
+<li><a href=/><span data-hover=Home>Home</span></a></li>
+<li><a href=/categories/><span data-hover=Categories>Categories</span></a></li>
+<li><a href=/tags/><span data-hover=Tags>Tags</span></a></li>
+<li><a href=/index.xml><span data-hover=Subscribe>Subscribe</span></a></li>
+</ul>
+<div class=copyright>© 2021 <a href=/>Slaveya Nedelcheva</a> | <a href=mailto:slaveya@gmail.com>✉️e-mail</a></div>
+</div>
+</footer>
+<script src=//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js></script>
+<script src=//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js></script>
+<script>hljs.configure({languages:[]}),hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

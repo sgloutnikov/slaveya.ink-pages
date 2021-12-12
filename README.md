@@ -1,1 +1,0 @@
-# slaveya.ink-pages
