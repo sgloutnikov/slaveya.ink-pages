@@ -4,8 +4,10 @@ body {
 main p {
   line-height: 1.5em;
   margin-bottom: -0.5em;
+  color: #4d1764
 }
 div.head-meta {
+  color: #84738b;
   font-family: Copperplate, Georgia, serif, Calibri, Arial;
   font-size: 1.1em;
   padding-top: 10px
@@ -19,4 +21,40 @@ code {
 pre code {
   font-family: "Lucida Console", Monaco, 'STKaiti', 'KaiTi', 'SimKai', monospace;
   font-size: .85em;
+}
+.author {
+  font-family: Copperplate, Georgia, serif, Calibri, Arial;
+  color: #4d1764
+}
+.date {
+  font-family: Copperplate, Georgia, serif, Calibri, Arial;
+  color: #84738b;
+}
+.article-meta a {
+  font-family: Copperplate, Georgia, serif, Calibri, Arial;
+  color: #4d1764
+}
+.article-meta p {
+  font-family: Copperplate, Georgia, serif, Calibri, Arial;
+  color: #4d1764
+}
+.summary a {
+  color: #4d1764;
+  font-size: 0.85em;
+}
+h1 {
+  font-family: Copperplate, Georgia, serif, Calibri, Arial;
+}
+h3 {
+  font-family: Copperplate, Georgia, serif, Calibri, Arial;
+  color: #84738b;
+}
+.terms a {
+  font-family: Copperplate, Georgia, serif, Calibri, Arial; 
+}
+.terms a:link {
+  color: #510080;
+}
+.terms a:visited{
+  color: #510080;
 }
