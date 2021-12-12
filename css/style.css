@@ -80,7 +80,7 @@ article { padding: 1em; }
 .article-footer { text-align: left; }
 .title { font-size: 1.2em; }
 .article-list h1, .title {
-  font-family: Georgia, serif, Calibri, Arial;
+  font-family: Copperplate, Georgia, serif, Calibri, Arial;
   font-size: 1.3em;
   line-height: 1.2em;
 }
