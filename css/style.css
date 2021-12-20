@@ -95,7 +95,6 @@ article { padding: 1em; }
 .pagination li, .terms li { display: inline; }
 .pagination a { 
   padding: 0 .6em;
-  font-weight: bold;
   color: #fff;
   background-color: #666;
 }
