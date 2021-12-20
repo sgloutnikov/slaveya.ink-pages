@@ -24,7 +24,7 @@ pre code {
 }
 .author {
   font-family: Copperplate, Georgia, serif, Calibri, Arial;
-  color: #4d1764
+  color: #4e2d5c
 }
 .date {
   font-family: Copperplate, Georgia, serif, Calibri, Arial;
@@ -32,14 +32,14 @@ pre code {
 }
 .article-meta a {
   font-family: Copperplate, Georgia, serif, Calibri, Arial;
-  color: #4d1764
+  color: #51305f
 }
 .article-meta p {
   font-family: Copperplate, Georgia, serif, Calibri, Arial;
-  color: #4d1764
+  color: #4f345a
 }
 .summary a {
-  color: #4d1764;
+  color: #552f66;
   font-size: 0.85em;
 }
 h1 {
@@ -47,14 +47,14 @@ h1 {
 }
 h3 {
   font-family: Copperplate, Georgia, serif, Calibri, Arial;
-  color: #84738b;
+  color: #7f7285;
 }
 .terms a {
   font-family: Copperplate, Georgia, serif, Calibri, Arial; 
 }
 .terms a:link {
-  color: #510080;
+  color: #34283b;
 }
 .terms a:visited{
-  color: #510080;
+  color: #34223f;
 }
