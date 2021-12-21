@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://slaveya.ink/sitemap.xml
